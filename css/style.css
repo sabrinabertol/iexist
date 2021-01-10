@@ -1,0 +1,33 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:700');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+/* Fontawesome */
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+
+/* Components */
+@import url('components/banner.css');
+
+/* Custom design below! */
+
+body {
+  background-color: rgb(5, 5, 5);
+  color: #666666;
+  font-family: Open Sans;
+}
+
+h1, h2 {
+  font-family: 'Permanent Marker';
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(200, 200, 200);
+}
+
+a:hover {
+  color: rgba(200, 200, 200, 0.5);
+}

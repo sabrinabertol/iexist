@@ -1,0 +1,35 @@
+.frames {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#slideshow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    position: relative;
+    width: 75%;
+    height: 400px;
+    padding: 10px;
+}
+
+#slideshow > div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+.frames img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  overflow: hidden;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  margin-bottom: 15px;
+
+}

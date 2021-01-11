@@ -26,7 +26,15 @@
     </div>
     <div class="container">
       <div class="row justify-content-center">
+
         <div class="col-lg-8 col-sm-12">
+          <div class="quote">
+            <h5 class="text-center">As far as we can discern, the sole purpose of human
+              existenceis to kindle a light in the darkness of mere being.
+              It may even be assumed that just as the unconscious affects us,
+              so the increase in our consciousness affects the unconscious.</h5>
+            <p class="text-right">Carl Jung, <i>Memories, Dreams, Reflections,</i> 1961</p>
+          </div>
           <div class="poem">
             <p>
               your life is your life<br>
@@ -52,10 +60,8 @@
               <strong>"The Laughing Heart" - Charles Bukowski</strong>
             </p>
           </div>
-          <div class="exist-page">
-            <a href="existence.html"><strong>"Existence"</strong></a>
-          </div>
         </div>
+
         <div class="col-lg-12 col-sm-12">
           <div class="d-flex align-items-center justify-content-center">
           <div class="exist-bar">
@@ -69,7 +75,9 @@
           </div>
           </div>
         </div>
+
         <div class="col-lg-8 col-sm-12">
+
           <div class="dicio">
             <h1>cogito, ergo sum</h1>
             <h3>je pense, donc je suis</h3>
@@ -100,37 +108,67 @@
             <h3>/ˈnaɪ(h)ɪlɪzəm, ˈniː-/</h3>
             <p>(noun, philosophy)</p>
             <input id="textAreaToggle2" type="checkbox" />
-              <p id="textarea2">
-                <strong>Noun</strong><br>
-                total rejection of established laws and institutions.<br>
-                anarchy, terrorism, or other revolutionary activity.<br>
-                total and absolute destructiveness, especially toward the world at large and including oneself:<br>
-                the power-mad nihilism that marked Hitler's last years.<br>
-                <strong>Philosophy</strong><br>
-                an extreme form of skepticism: the denial of all real existence or the possibility of an objective basis for truth.<br>
-                nothingness or nonexistence.<br>
-                (sometimes initial capital letter) the principles of a Russian revolutionary group, active in the latter half of the 19th century, holding that existing social and political institutions must be destroyed in order to clear the way for a new state of society and employing extreme measures, including terrorism and assassination.<br>
-                annihilation of the self, or the individual consciousness, especially as an aspect of mystical experience.<br>
+            <div id="textarea2">
+              <p>
+                Nihilism is the belief that all values are baseless and that nothing can be known or communicated.
+                It is often associated with <strong>extreme pessimism and a radical skepticism that condemns existence.</strong>
+                A true nihilist would believe in nothing, have no loyalties, and no purpose other than, perhaps,
+                an impulse to destroy. While few philosophers would claim to be nihilists,
+                nihilism is most often associated with <strong>Friedrich Nietzsche</strong> who argued that its corrosive
+                effects would eventually destroy all moral, religious, and metaphysical convictions and precipitate
+                the greatest crisis in human history. In the 20th century, nihilistic themes–epistemological failure,
+                value destruction, and cosmic purposelessness–have preoccupied artists, social critics, and philosophers.
+                Mid-century, for example, the existentialists helped popularize tenets of nihilism in their attempts to
+                blunt its destructive potential. By the end of the century, existential despair as a response to nihilism
+                gave way to an attitude of indifference, often associated with antifoundationalism.<br>
+                <a href="https://iep.utm.edu/nihilism/" target="_blank">(source: https://iep.utm.edu/nihilism/)</a>
               </p>
+            </div>
             <label for="textAreaToggle2"></label>
           </div>
 
-          <div class="d-flex align-items-center justify-content-center">
-            <div class="exist-bar2">
-              <h1>I <span class="extra">(still)</span> Exist</h1>
+          <div class="frames">
+            <div id="slideshow">
+               <div>
+                 <img src="images/moon.jpg">
+                 <a href="https://www.nasa.gov/image-feature/at-tranquility-base" target="_blank">On July 20, 1969, humanity stepped foot on another celestial body and into history.<br>
+                   (Image Credit: NASA)</a>
+               </div>
+               <div>
+                 <img src="images/person.jpeg">
+                 <a href="https://thispersondoesnotexist.com/" target="_blank">This person does not exist.</a>
+               </div>
+               <div>
+                <img src="images/lascaux.jpg">
+                <a href="https://www.history.com/this-day-in-history/lascaux-cave-paintings-discovered" target="_blank">Parietal wall paintings in the cave of Lascaux, France, estimated at around 17,000 years ago (Upper Paleolithic).</a>
+              </div>
+               <div>
+                <img src="images/punk.jpg">
+                <a href="https://unsplash.com/photos/AVvaziFXCEY" target="_blank">Graffiti on the walls of Perdões, São Paulo. (Photo by Carlos Arthur M.R)</a>
+              </div>
+               <div>
+                <img src="images/spiral.jpg">
+                <a href="https://holtsmithsonfoundation.org/spiral-jetty" target="_blank">Spiral Getty - Robert Smithson (1970, Great Salt Lake, Utah)<br>
+                  Constructed from 6,650 tons of rock and earth, the spiral continuously changes form as nature, industry, and time take effect.</a>
+              </div>
             </div>
           </div>
-          <div class="bye text-center">
+
+          <div class="exist-bar2">
+            <h1>I <span class="extra">(still)</span> Exist</h1>
+          </div>
+
+          <div class="bye">
             <p>
               This is a plain HTML, CSS & JavaScript website built for no reason.<br>
               Between one existential crisis and another, I just build websites for fun.<br>
-              All the content was freely taken from places like Wikipedia, Unsplash, Codepen, Dictionary & allpoems.com.<br>
-              Thanks for reading until the end and have fun painting walls.
+              Thanks for reading until the end and have fun painting walls. Leave a mark.
               <a href="https://github.com/sabrinabertol" target="_blank">
                 <i class="fab fa-github-square"></i>
               </a>
             </p>
           </div>
+
         </div>
       </div>
     </div>
@@ -147,16 +185,13 @@
       const ctx = canvas.getContext('2d');
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-
       ctx.strokeStyle = '#000';
       ctx.lineJoin = 'round';
       ctx.lineCap = 'round';
       ctx.lineWidth = 15;
-
       let isDrawing = false;
       let lastX = 0;
       let lastY = 0;
-
       function draw(e) {
         if (!isDrawing) return;
         ctx.beginPath();
@@ -165,15 +200,24 @@
         ctx.stroke();
         [lastX, lastY] = [e.offsetX, e.offsetY];
       }
-
       canvas.addEventListener('mousedown', (e) => {
         isDrawing = true;
         [lastX, lastY] = [e.offsetX, e.offsetY];
       });
-
       canvas.addEventListener('mousemove', draw);
       canvas.addEventListener('mouseup', () => isDrawing = false);
       canvas.addEventListener('mouseout', () => isDrawing = false);
+    </script>
+    <script>
+      $("#slideshow > div:gt(0)").hide();
+      setInterval(function() {
+        $('#slideshow > div:first')
+          .fadeOut(2000)
+          .next()
+          .fadeIn(2000)
+          .end()
+          .appendTo('#slideshow');
+      }, 3000);
     </script>
   </body>
 </html>

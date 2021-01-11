@@ -13,6 +13,7 @@
 @import url('components/footer.css');
 @import url('components/buttons.css');
 @import url('components/showhide.css');
+@import url('components/slider.css');
 
 
 /* Custom design below! */
@@ -38,8 +39,21 @@ a:hover {
   text-decoration: none;
 }
 
+
+.quote {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.quote h5 {
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
 .poem {
-  margin-top: 500px;
+  margin-top: 200px;
   line-height: 3;
   text-align: center;
 }
@@ -49,6 +63,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   color: rgb(15, 15, 15);
 }
 

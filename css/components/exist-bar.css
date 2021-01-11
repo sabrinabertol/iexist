@@ -8,6 +8,7 @@
   height: 75vh;
   align-items: center;
   display: flex;
+  justify-content: center;
 }
 
 .scroll {

@@ -1,0 +1,18 @@
+.footer {
+  background: transparent;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.list-inline {
+  list-style: none;
+}
+
+.list-inline li {
+  display: inline;
+  font-size: 5vh;
+  padding: 10px;
+}

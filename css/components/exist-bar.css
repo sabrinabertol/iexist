@@ -1,0 +1,32 @@
+.exist-bar {
+  height: 100vh;
+  align-items: center;
+  display: flex;
+}
+
+.exist-bar2 {
+  height: 75vh;
+  align-items: center;
+  display: flex;
+}
+
+.scroll {
+  white-space: nowrap; /* [1] */
+  overflow-x: auto; /* [2] */
+  -webkit-overflow-scrolling: touch; /* [3] */
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* [4] */
+}
+
+.scroll::-webkit-scrollbar {
+  display: none; /* [5] */
+}
+
+.extra, .extra1, .extra2, .extra3, .extra4 {
+  display: none;
+}
+
+h1:hover .extra, h1:hover .extra1, h1:hover .extra2, h1:hover .extra3, h1:hover .extra4  {
+  display: inline-block;
+  font-size: 3vh;
+  color: red;
+}

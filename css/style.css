@@ -9,6 +9,11 @@
 
 /* Components */
 @import url('components/banner.css');
+@import url('components/exist-bar.css');
+@import url('components/footer.css');
+@import url('components/buttons.css');
+@import url('components/showhide.css');
+
 
 /* Custom design below! */
 
@@ -25,9 +30,42 @@ h1, h2 {
 
 a {
   text-decoration: none;
-  color: rgb(200, 200, 200);
+  color: rgb(15, 15, 15);
 }
 
 a:hover {
-  color: rgba(200, 200, 200, 0.5);
+  color: #333333;
+  text-decoration: none;
+}
+
+.poem {
+  margin-top: 500px;
+  line-height: 3;
+  text-align: center;
+}
+
+.bye {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(15, 15, 15);
+}
+
+.bye:hover {
+  color: #333333;
+}
+
+.exist-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+  margin-bottom: 150px;
+}
+
+
+.dicio{
+  margin-top: 200px;
+  margin-bottom: 150px;
 }

@@ -18,23 +18,15 @@ body, html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-/*  mix-blend-mode: multiply;
-  mix-blend-mode: screen;*/
-
 }
 
 .hero-text h1 {
-  color: rgba(120, 120, 120);
-  text-shadow: 0px 0px 4px #777777;
+  color: rgb(5, 5, 5);
+  text-shadow: 0px 0px 4px black;
   font-family: 'Permanent Marker';
   font-size: 25vh;
   -ms-transform: rotate(-8deg); /* IE 9 */
   transform: rotate(-8deg);
-}
-
-.hero-text h1:hover {
-  -ms-transform: rotate(-7.8deg); /* IE 9 */
-  transform: rotate(-7.8deg);
 }
 
 .other-text {
@@ -88,23 +80,6 @@ body, html {
   right: 10%;
   mix-blend-mode: multiply;
   height: 250px;
-}
-
-.extra {
-    display: none;
-}
-
-.hero-text h4 {
-  color: rgba(70, 70, 70);
-  text-shadow: 0px 0px 4px #777777;
-  font-family: 'Permanent Marker';
-  font-size: 7vh;
-  -ms-transform: rotate(-30deg); /* IE 9 */
-  transform: rotate(-30deg);
-}
-
-h1:hover .extra {
-    display: inline-block;
 }
 
 

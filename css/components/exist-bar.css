@@ -1,25 +1,21 @@
-.exist-bar {
-  height: 100vh;
-  align-items: center;
-  display: flex;
-}
+/*make this code responsive for mobile*/
 
-.exist-bar2 {
-  height: 75vh;
+.exist-bar, .exist-bar2 { 
+  height: 100vh;
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
 .scroll {
-  white-space: nowrap; /* [1] */
-  overflow-x: auto; /* [2] */
-  -webkit-overflow-scrolling: touch; /* [3] */
-  -ms-overflow-style: -ms-autohiding-scrollbar; /* [4] */
+  white-space: nowrap; 
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch; 
+  -ms-overflow-style: -ms-autohiding-scrollbar; 
 }
 
 .scroll::-webkit-scrollbar {
-  display: none; /* [5] */
+  display: none; 
 }
 
 .extra, .extra1, .extra2, .extra3, .extra4 {

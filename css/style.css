@@ -1,29 +1,63 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:700');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
-
-/* Fontawesome */
-@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:700");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 /* Components */
-@import url('components/banner.css');
-@import url('components/exist-bar.css');
-@import url('components/footer.css');
-@import url('components/showhide.css');
-@import url('components/slider.css');
+@import url("components/banner.css");
+@import url("components/exist-bar.css");
+@import url("components/showhide.css");
+@import url("components/slider.css");
+@import url("components/navbar.css");
 
-/* Custom design below! */
+/* CSS */
 
 body {
   background-color: rgb(5, 5, 5);
   color: #666666;
   font-family: Open Sans;
+
 }
 
-h1, h2 {
-  font-family: 'Permanent Marker';
+section {
+  grid-column: 3 / span 8;
+}
+
+.header {
+	background: transparent;
+	height: 70px;
+	position: fixed;
+	top: 0; right: 10%; left: 10%;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 15px;
+}
+
+.expanded {
+  grid-column: 1 / span 12;
+}
+
+.centered-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  font-family: "Permanent Marker";
   color: white;
 }
 
@@ -37,26 +71,31 @@ a:hover {
   text-decoration: none;
 }
 
-.quote {
+#quote {
   height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 100px;
 }
 
-.quote h5 {
+#quote h5 {
   line-height: 2;
-  margin-bottom: 30px;
+  font-style: normal;
 }
 
-.poem {
-  margin-top: 200px;
+#poem {
   line-height: 3;
   text-align: left;
-  margin-left: 100px;
+  margin-bottom: 200px;
 }
 
-.bye {
+#dicio {
+  margin-top: 200px;
+  margin-bottom: 150px;
+}
+
+#bye {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -65,31 +104,21 @@ a:hover {
   color: rgb(15, 15, 15);
 }
 
-.bye:hover {
+#bye:hover {
   color: #333333;
 }
 
-.exist-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 200px;
-  margin-bottom: 150px;
+.term {
+  margin-bottom: 50px;
 }
 
-.dicio {
-  margin-top: 200px;
-  margin-bottom: 150px;
-}
+/* Shiny effect */
 
-
-/*Shiny effect*/
 .shiny {
   position: relative;
   border: none;
   padding: 10px 15px;
-  font-weight: bold;
-  cursor: pointer;
+  cursor: none;
   overflow: hidden;
 }
 
@@ -108,36 +137,3 @@ a:hover {
 .shiny:hover::after {
   opacity: 0.4;
 }
-
-
-
-
-
-
-.container {
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
-  }
-  
-  .main-content {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 15px;
-  }
-  
-  .content {
-    grid-column: 3 / span 8;
-  }
-
-  .content-expanded {
-    grid-column: 1 / span 12;
-  }
-
-
-  .centered-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    }

@@ -13,7 +13,6 @@
 @import url("components/navbar.css");
 
 /* CSS */
-
 body {
   background-color: rgb(5, 5, 5);
   color: #666666;
@@ -113,7 +112,6 @@ a:hover {
 }
 
 /* Shiny effect */
-
 .shiny {
   position: relative;
   border: none;

@@ -1,71 +1,137 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:700');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
-
-/* Fontawesome */
-@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:700");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 /* Components */
-@import url('components/banner.css');
-@import url('components/exist-bar.css');
-@import url('components/footer.css');
-@import url('components/buttons.css');
-@import url('components/showhide.css');
+@import url("components/banner.css");
+@import url("components/exist-bar.css");
+@import url("components/showhide.css");
+@import url("components/slider.css");
+@import url("components/navbar.css");
 
-
-/* Custom design below! */
-
+/* CSS */
 body {
   background-color: rgb(5, 5, 5);
   color: #666666;
   font-family: Open Sans;
+
 }
 
-h1, h2 {
-  font-family: 'Permanent Marker';
+section {
+  grid-column: 3 / span 8;
+}
+
+.header {
+	background: transparent;
+	height: 70px;
+	position: fixed;
+	top: 0; right: 10%; left: 10%;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 15px;
+}
+
+.expanded {
+  grid-column: 1 / span 12;
+}
+
+.centered-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  font-family: "Permanent Marker";
   color: white;
 }
 
 a {
   text-decoration: none;
-  color: rgb(15, 15, 15);
+  color: #333333;
 }
 
 a:hover {
-  color: #333333;
+  color: #666666;
   text-decoration: none;
 }
 
-.poem {
-  margin-top: 500px;
-  line-height: 3;
-  text-align: center;
+#quote {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 100px;
 }
 
-.bye {
+#quote h5 {
+  line-height: 2;
+  font-style: normal;
+}
+
+#poem {
+  line-height: 3;
+  text-align: left;
+  margin-bottom: 200px;
+}
+
+#dicio {
+  margin-top: 200px;
+  margin-bottom: 150px;
+}
+
+#bye {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: left;
   color: rgb(15, 15, 15);
 }
 
-.bye:hover {
+#bye:hover {
   color: #333333;
 }
 
-.exist-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 200px;
-  margin-bottom: 150px;
+.term {
+  margin-bottom: 50px;
 }
 
+/* Shiny effect */
+.shiny {
+  position: relative;
+  border: none;
+  padding: 10px 15px;
+  cursor: none;
+  overflow: hidden;
+}
 
-.dicio{
-  margin-top: 200px;
-  margin-bottom: 150px;
+.shiny::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--y, 0) * 1px - 50px);
+  left: calc(var(--x, 0) * 1px - 50px);
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(white, #3984ff00 80%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.shiny:hover::after {
+  opacity: 0.4;
 }

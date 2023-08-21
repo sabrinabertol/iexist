@@ -1,61 +1,62 @@
-#textarea, #textarea2, #textarea3 {
-    display: none;
+#textarea,
+#textarea2,
+#textarea3 {
+  display: none;
 }
 
 #textAreaToggle:checked + #textarea {
-    display: block;
+  display: block;
 }
 
 #textAreaToggle2:checked + #textarea2 {
-    display: block;
+  display: block;
 }
 
 #textAreaToggle3:checked + #textarea3 {
-    display: block;
+  display: block;
 }
 
 input[type="checkbox"] {
-    position: absolute;
-    left: -1000px;
+  position: absolute;
+  left: -1000px;
 }
 
 label {
-    display: block;
+  display: block;
 }
 
 #textAreaToggle + #textarea + label::before {
-    content: 'Read more +';
-    font-size: small;
-    cursor: pointer;
+  content: "Read more +";
+  font-size: small;
+  cursor: pointer;
 }
 
 #textAreaToggle:checked ~ #textarea + label::before {
-    content: 'Read less -';
-    font-size: small;
-    cursor: pointer;
+  content: "Read less -";
+  font-size: small;
+  cursor: pointer;
 }
 
 #textAreaToggle2 + #textarea2 + label::before {
-    content: 'Read more +';
-    font-size: small;
-    cursor: pointer;
+  content: "Read more +";
+  font-size: small;
+  cursor: pointer;
 }
 
 #textAreaToggle2:checked ~ #textarea2 + label::before {
-    content: 'Read less -';
-    font-size: small;
-    cursor: pointer;
+  content: "Read less -";
+  font-size: small;
+  cursor: pointer;
 }
 
 #textAreaToggle3 + #textarea3 + label::before {
-    content: 'Read more +';
-    font-size: small;
-    cursor: pointer;
+  content: "Read more +";
+  font-size: small;
+  cursor: pointer;
 }
 
 #textAreaToggle3:checked ~ #textarea3 + label::before {
-    content: 'Read less -';
-    font-size: small;
-    cursor: pointer;
+  content: "Read less -";
+  font-size: small;
+  cursor: pointer;
 }
-

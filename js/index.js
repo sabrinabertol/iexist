@@ -10,21 +10,38 @@ ctx.lineWidth = 15;
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
+// Mobile
+if (window.matchMedia('(pointer: none)').matches) {
+  canvas.addEventListener('touchstart', (e) => {
+    isDrawing = true;
+    [lastX, lastY] = [e.clientX, e.clientY];
+  });
+}
+// Desktop
+else {
+  canvas.addEventListener('mousedown', (e) => {
+    isDrawing = true;
+    [lastX, lastY] = [e.offsetX, e.offsetY];
+  });
+}
+
 function draw(e) {
   if (!isDrawing) return;
   ctx.beginPath();
   ctx.moveTo(lastX, lastY);
-  ctx.lineTo(e.offsetX, e.offsetY);
+  ctx.lineTo(e.clientX, e.clientY);
   ctx.stroke();
-  [lastX, lastY] = [e.offsetX, e.offsetY];
+  [lastX, lastY] = [e.clientX, e.clientY];
 }
-canvas.addEventListener('mousedown', (e) => {
-  isDrawing = true;
-  [lastX, lastY] = [e.offsetX, e.offsetY];
-});
+canvas.addEventListener('touchmove', draw);
 canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('touchend', () => isDrawing = false);
 canvas.addEventListener('mouseup', () => isDrawing = false);
 canvas.addEventListener('mouseout', () => isDrawing = false);
+
+
+
+
 
 
 // Slideshow

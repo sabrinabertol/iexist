@@ -1,21 +1,8 @@
-/*make this code responsive for mobile*/
-
 .exist-bar { 
   height: 100vh;
   align-items: center;
   display: flex;
   justify-content: center;
-}
-
-.scroll {
-  white-space: nowrap; 
-  overflow-x: auto; 
-  -webkit-overflow-scrolling: touch; 
-  -ms-overflow-style: -ms-autohiding-scrollbar; 
-}
-
-.scroll::-webkit-scrollbar {
-  display: none; 
 }
 
 .extra {
@@ -26,4 +13,12 @@ h1:hover .extra  {
   display: inline-block;
   font-size: 3vh;
   color: red;
+}
+
+@media (pointer: none) {
+  h1:active .extra  {
+    display: inline-block;
+    font-size: 3vh;
+    color: red;
+  }
 }

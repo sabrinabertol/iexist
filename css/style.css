@@ -6,11 +6,12 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 /* Components */
-@import url("components/banner.css");
+@import url("components/header.css");
 @import url("components/exist-bar.css");
 @import url("components/showhide.css");
-@import url("components/slider.css");
+@import url("components/frames.css");
 @import url("components/navbar.css");
+@import url("components/shiny.css");
 
 
 body {
@@ -108,27 +109,13 @@ a:hover {
   margin-bottom: 50px;
 }
 
-/* Shiny effect */
-.shiny {
-  position: relative;
-  border: none;
-  padding: 10px 15px;
-  cursor: none;
-  overflow: hidden;
-}
+@media (pointer: none) {
+  #bye:active {
+    color: #333333;
+  }
 
-.shiny::after {
-  content: "";
-  position: absolute;
-  top: calc(var(--y, 0) * 1px - 50px);
-  left: calc(var(--x, 0) * 1px - 50px);
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(white, #3984ff00 80%);
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.shiny:hover::after {
-  opacity: 0.4;
+  a:active {
+    color: #666666;
+    text-decoration: none;
+  }
 }
